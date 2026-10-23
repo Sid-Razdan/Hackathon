@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<!--toast text and id-->
+{% if submitted %}
+<div class="toast" id="toast">Thank you for your help!</div>
+{% endif %}
+
+<!--SELF-NOTE: Add more required details for form-->
+<form method="post" action="/post" class="card">
+    <h1>Post Surplus Food</h1>
+    <input type="text" name="stallName" placeholder ="Stall name" required/><br>
+    <input type="tel" name="phoneNumber" placeholder ="Phone number" required/><br>
+    <input type="text" name="foodType" placeholder ="Food Type" required/><br>
+    <input type="number" name="quantityKG" placeholder ="Quantity (kg)" step="0.1" required/><br>
+    
+<!--Radio buttons, got help from: https://www.debugbar.com/how-to-style-radio-button-formidable-form/ -->
+    <div class="toggleRow">
+        <label class="toggleOption selected" id="labelEdible">
+            <input type="radio" name="condition" value="edible" checked style="display:none;">
+            <span class="toggleTitle">Still Edible</span>
+            <span class="toggleExample">e.g. unsold trays, still packaged</span>
+        </label>
+        <label class="toggleOption" id="labelScraps">
+            <input type="radio" name="condition" value="scraps" style="display:none;"> 
+            <span class="toggleTitle">Scraps Only</span>
+            <span class="toggleExample">e.g. husks, eggshells, peels</span>
+        </label>
+    </div>
+    <button class="buttonPrimary">Submit Post</button>
+
+</form>
+
+<!--javascript stuff-->
+<!--add the selected label when clicked-->
+<!--second part is 'toast' after post submit - disappears after 3 seconds-->
+<script>
+    var toggleLabels = document.querySelectorAll('.toggleOption');
+
+    toggleLabels.forEach(function(label) {
+        label.addEventListener('click', function(){
+            toggleLabels.forEach(function(otherLabel) {
+                otherLabel.classList.remove('selected');               
+            });
+            label.classList.add('selected');
+        });
+    }); 
+    
+
+    var toast = document.getElementById('toast');
+    if (toast) {
+        setTimeout(function() {
+            toast.style.opacity = '0';
+        }, 3000);
+    }
+</script>
+
+{% endblock %}

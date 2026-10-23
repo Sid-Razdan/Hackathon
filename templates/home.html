@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="heroBand">
+    <div class="hero">
+        <h1>Closing the Loop on Hawker Centre Food Waste</h1>
+        <p class="heroText">Second Serving helps hawkers give still-good food a second chance to food charities, and turns leftover scraps into compost for community gardens!</p>
+
+        <!--Key stats added to page so it doesn't feel empty - all real data from my research-->
+        <div class="heroStats">
+            <div class="statBox">
+                <p class="statIcon">🌏</p>
+                <p class="heroNumber">90%</p>
+                <p class="heroSentence">of Singapore's food is <b>imported</b></p>
+            </div>
+            <div class="statBox">
+                <p class="statIcon">🗑️</p>
+                <p class="heroNumber">1/3</p>
+                <p class="heroSentence">of that goes to <b>waste</b></p>
+            </div>
+            <div class="statBox">
+                <p class="statIcon">📦</p>
+                <p class="heroNumber">784,000</p>
+                <p class="heroSentence">tonnes of food <b>wasted</b> EVERY year in SG</p>
+            </div>
+        </div>
+
+        <!-- buttons to diff pages so readers directly go to key pages-->
+        <div class="heroButtons">
+            <a href="{{ url_for('post') }}" class="heroBut1">Post Surplus</a>
+            <a href="{{ url_for('charities') }}" class="heroBut2">See Charities Feed</a>
+            <a href="{{ url_for('gardens') }}" class="heroBut2">See Gardens Feed</a>
+        </div>
+
+        <!--quick teaser linking to real impact dashboard page-->
+        <div class="dashboardTeaser">
+            <p class="dashboardTeaserText">Curious how Second Serving is already helping?</p>
+            <a href="{{ url_for('dashboard') }}" class="dashboardTeaserBut">See Full Impact Dashboard -></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

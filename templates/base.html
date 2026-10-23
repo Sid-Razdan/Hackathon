@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second Serving</title>
+    <!--Stylesheet link-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!--font loading - work sans-->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--nav bar-->
+    <nav class="navBar">
+        <span class="navBrand">Second Serving</span>
+        <div class="navLinks">
+            <a href="{{ url_for('home') }}" class="{{ 'active' if activePage == 'home' }}">Home</a>
+            <a href="{{ url_for('post') }}" class="{{ 'active' if activePage == 'post' }}">Post</a>
+            <a href="{{ url_for('charities') }}" class="{{ 'active' if activePage == 'charities' }}">Charities</a>
+            <a href="{{ url_for('gardens') }}" class="{{ 'active' if activePage == 'gardens' }}">Gardens</a>
+            <a href="{{ url_for('dashboard') }}" class="{{ 'active' if activePage == 'dashboard' }}">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="pageContent">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

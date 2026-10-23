@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Charities Feed</h1>
+
+<!--code to create the "postcard" class which displays all info seprated by "posts"-->
+{% for post in posts %}
+   <div class="postCard">
+    <!--claim button-->
+    <form method="post" action="/claim/{{ post[0] }}">
+        <button class="buttonClaim">Claim</button>
+    </form>
+        <p class="postTitle">{{ post[2] }} - {{ post[3] }}kg</p>
+        <p class="postContact">from {{ post[1] }}</p>
+        <p class="postContact">📞 {{ post[5] }}</p>
+    </div>
+{% endfor %}
+
+{% endblock %}
