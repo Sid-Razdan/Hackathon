@@ -1,7 +1,8 @@
 
 
 body {
-    background-color: #f5f3ef;
+    background-color: #F1EADC;
+    color: #2B241E;
     font-family: 'Work Sans', Arial, sans-serif;
     font-weight: 500;
     margin: 0;
@@ -16,14 +17,15 @@ body {
     align-items: center;
     gap: 40px;
     padding: 20px 80px;
-    background-color: white;
-    border-bottom: 1px solid #cccccc;
+    background-color: #FBF8F2;
+    border-bottom: 1px solid #CBBFA9;
 }
 
 .navBrand {
     font-weight: bold;
     font-size: 18px;
-    color: #1f1f1f;
+    color: #2B241E;
+    font-family: 'Fraunces', serif;
 }
 
 .navLinks {
@@ -33,36 +35,39 @@ body {
 
 .navLinks a {
     text-decoration: none;
-    color: #737373;
+    color: #8A7F6C;
     font-weight: 500;
     font-size: 15px
 }
 
 .navLinks a:hover {
-    color: #0c8ce9
+    color: #A8491F
 }
 
 .navLinks a.active {
-    color: #0c8ce9;
+    color: #A8491F;
     font-weight: 700;
 }
 
 h1 {
     font-size: 32px;
-    color: #1f1f1f;
+    color: #2B241E;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    
 }
 
 /*for the post form card, I took inspo from: 
 https://www.youtube.com/watch?v=Ntk0zTdsm1I - "How to Create a Stunning Form Using CSS" by Web Tech Knowledge */
 .card {
-    background-color: white;
-    border: 1px solid #cccccc;
+    background-color: #FBF8F2;
+    border: 1px solid #CBBFA9;
     border-radius: 12px;
     padding: 32px;
-    width: 100%;
+    max-width: 600px;
     box-sizing: border-box;
-    margin: 25px 25px 25px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
+    margin: 25px 0;
+    box-shadow: 0px 4px 10px rgba(43, 36, 30, 0.15)
 }
 
 input[type="text"], input[type="number"], input[type="tel"]{
@@ -70,7 +75,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
     height: 48px;
     padding: 0 14px;
     background-color: #e6e6e6;
-    border: 1px solid #cccccc;
+    border: 1px solid #CBBFA9;
     border-radius: 6px;
     font-size: 15px;
     margin-bottom: 16px;
@@ -78,7 +83,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .buttonPrimary {
-    background-color: #0c8ce9;
+    background-color: #A8491F;
     color: white;
     border: none;
     border-radius: 6px;
@@ -106,26 +111,26 @@ input[type="text"], input[type="number"], input[type="tel"]{
     align-items: center;
     text-align: center;
     padding: 14px 12px;
-    background-color: white;
-    border: 2px solid #0c8ce9;
+    background-color: #FBF8F2;
+    border: 2px solid #A8491F;
     border-radius: 8px;
     cursor: pointer;
 }
 
 .toggleTitle {
     font-weight: bold;
-    color: #0c8ce9;
+    color: #A8491F;
     font-size: 15px;
 }
 
 .toggleExample {
     font-size: 12px;
-    color: #737373;
+    color: #8A7F6C;
     margin-top: 4px;
 }
 
 .toggleOption.selected {
-    background-color: #0c8ce9;
+    background-color: #A8491F;
 }
 
 .toggleOption.selected .toggleTitle {
@@ -133,7 +138,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .toggleOption.selected .toggleExample {
-    color: #e0edfc;
+    color: #F3DCCB;
 }
 
 .toast {
@@ -141,34 +146,32 @@ input[type="text"], input[type="number"], input[type="tel"]{
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #0c8ce9;
+    background-color: #A8491F;
     color: white;
     padding: 14px 24px;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(43, 36, 30, 0.25);
     transition: opacity 0.5s ease;
 }
 
 .postCard {
-    background-color: white;
-    border: 1px solid #cccccc;
+    background-color: #FBF8F2;
+    border: 1px solid #CBBFA9;
     padding: 20px 24px;
     margin-bottom: 16px;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
-}
-
-.postCard form {
-    float: right;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .postTitle {
     font-weight: bold;
     font-size: 16px;
-    color: #1f1f1f;
+    color: #2B241E;
     margin: 0 0 6px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -176,14 +179,14 @@ input[type="text"], input[type="number"], input[type="tel"]{
 
 .postContact {
     font-size: 14px;
-    color: #737373;
+    color: #8A7F6C;
     margin: 0;
 }
 
 .buttonClaim {
-    background-color: white;
-    color: #0c8ce9;
-    border: 2px solid #0c8ce9;
+    background-color: #FBF8F2;
+    color: #A8491F;
+    border: 2px solid #A8491F;
     border-radius: 6px;
     padding: 10px 20px;
     font-size: 14px;
@@ -192,14 +195,14 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .buttonClaim:hover {
-    background-color: #0c8ce9;
+    background-color: #A8491F;
     color: white;
 }
 /* home page */
 .heroBand {
-    background-color: #13294b;
+    background-color: #2B241E;
     padding: 60px 0;
-    padding-bottom: 200px ;
+    padding-bottom: 60px ;
 }
 .hero {
     max-width: 800px;
@@ -215,7 +218,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .heroText {
-    color: #cdd6e3;
+    color: #D8CBB8;
     font-size: 16px;
     margin-bottom: 40px;
 }
@@ -228,7 +231,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .statBox {
-    background-color: #1f3b66;
+    background-color: #3D352C;
     border-radius: 10px;
     padding: 20px 24px;
     flex: 1;
@@ -245,7 +248,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 
 .heroSentence {
     font-size: 14px;
-    color: #cdd6e3;
+    color: #D8CBB8;
     margin: 0;
 }
 
@@ -268,13 +271,13 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .heroBut1 {
-    background-color: #0c8ce9;
+    background-color: #A8491f;
     color: white;
 }
 
 .heroBut2 {
     background-color: white;
-    color: #13294b;
+    color: #2b241e;
     border: 2px solid white;
 }
 
@@ -284,7 +287,7 @@ input[type="text"], input[type="number"], input[type="tel"]{
 }
 
 .dashboardTeaserText {
-    color: #cdd6e3;
+    color: #D8CBB8;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -294,4 +297,15 @@ input[type="text"], input[type="number"], input[type="tel"]{
     font-weight: bold;
     font-size: 15px;
     text-decoration: underline;
+}
+
+.pageHeader {
+    background-color: #2B241E;
+    padding: 30px 80px;
+    margin: -40px -80px 40px -80px;
+}
+
+.pageHeader h1 {
+    color: white;
+    margin: 0;
 }
