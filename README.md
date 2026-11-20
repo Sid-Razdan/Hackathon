@@ -22,6 +22,6 @@ Second Serving is an open-ended, two-sided matching tool aiming to repurpose foo
 1. Go to the charities page to see all currently available edible surplus.
 2. Click claim on a post (will be removed from other users once claimed) - use the stall's contact number to arrange pickup.
 
-3. **For Charities:**
+**For Gardens:**
 1. Go to the gardens page to see all currently available edible surplus.
 2. Click claim on a post (will be removed from other users once claimed) - use the stall's contact number to arrange pickup.
