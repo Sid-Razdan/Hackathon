@@ -11,6 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="toast" id ="flashToast">{{ messages[0] }}</div>
+            <script>
+                setTimeout(function() {
+                    document.getelementById("flashToast").style.display = "none";
+                }, 3000);
+            </script>
+        {% endif %}
+        {% endwith %}
+
     <!--nav bar-->
     <nav class="navBar">
         <span class="navBrand">Second Serving</span>
@@ -19,7 +30,6 @@
             <a href="{{ url_for('post') }}" class="{{ 'active' if activePage == 'post' }}">Post</a>
             <a href="{{ url_for('charities') }}" class="{{ 'active' if activePage == 'charities' }}">Charities</a>
             <a href="{{ url_for('gardens') }}" class="{{ 'active' if activePage == 'gardens' }}">Gardens</a>
-            <a href="{{ url_for('dashboard') }}" class="{{ 'active' if activePage == 'dashboard' }}">Dashboard</a>
         </div>
     </nav>
 

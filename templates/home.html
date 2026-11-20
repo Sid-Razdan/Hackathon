@@ -33,12 +33,23 @@
             <a href="{{ url_for('gardens') }}" class="heroBut2">See Gardens Feed</a>
         </div>
 
-        <!--quick teaser linking to real impact dashboard page-->
-        <div class="dashboardTeaser">
-            <p class="dashboardTeaserText">Curious how Second Serving is already helping?</p>
-            <a href="{{ url_for('dashboard') }}" class="dashboardTeaserBut">See Full Impact Dashboard -></a>
-        </div>
     </div>
+
+    <div class="heroDivider"></div>
+
+    <div class="insightSection">
+    <h2>Most Hawker Centres Still Have No Solution</h2>
+    <p class="insightText">Only 20 of Singapore's ~125 hawker centres have an on-site food waste digester, and food waste makes up of roughly 11% of all waste generated nationally.</p>
+
+    <div class="wasteBarLabels">
+        <span class="wasteLabelRecycled">18% recycled</span>
+        <span class="wasteLabelIncinerated">82% incinerated</span>
+    </div>
+    <div class="wasteBar">
+        <div class="wasteBarRecycled"></div>
+        <div class="wasteBarIncinerated"></div>
+    </div>
+</div>
 </div>
 
 {% endblock %}

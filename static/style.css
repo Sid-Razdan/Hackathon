@@ -309,3 +309,59 @@ input[type="text"], input[type="number"], input[type="tel"]{
     color: white;
     margin: 0;
 }
+
+.heroDivider {
+    border-top: 1px solid rgba(216, 203, 184, 0.25);
+    margin: 90px 0;
+}
+
+.insightSection {
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.insightSection h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.insightText {
+    color: #D8CBB8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.wasteBarLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.wasteLabelRecycled {
+    color: #D8CBB8;
+}
+
+.wasteLabelIncinerated {
+    color: #D8CBB8;
+}
+
+.wasteBar {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.wasteBarRecycled {
+    width: 18%;
+    background-color: #4B5D3A;
+}
+
+.wasteBarIncinerated {
+    width: 82%;
+    background-color: #A8491F;
+}

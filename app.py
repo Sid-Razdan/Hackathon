@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
 app = Flask(__name__)
-
+app.secret_key = "second-serving-secret-key"
 
 
 db = sqlite3.connect("database.db", check_same_thread=False)
@@ -76,14 +76,11 @@ def claim(post_id):
     db.commit()
 
     if matchedPost and matchedPost[0] == "edible":
+        flash("Claimed for a charity!")
         return redirect(url_for("charities"))
     else:
+        flash("Claimed for a garden!")
         return redirect(url_for("gardens"))
-    
-@app.route("/dashboard")
-def dashboard():
-    return render_template("dashboard.html", activePage="dashboard")
-
 
 if __name__ == "__main__":
     app.run(debug=True)
